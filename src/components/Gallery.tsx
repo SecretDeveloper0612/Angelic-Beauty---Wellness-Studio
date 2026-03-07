@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const galleryImages = [
     { src: "/hero-bg.png", alt: "Salon Interior" },
-    { src: "/about-spa.png", alt: "Spa Details" },
+    { src: "/about-spa.png", alt: "Studio Details" },
     { src: "/service-hair.png", alt: "Hair Styling" },
     { src: "/hero-bg.png", alt: "Salon View" },
-    { src: "/about-spa.png", alt: "Spa Ambiance" },
+    { src: "/about-spa.png", alt: "Studio Ambiance" },
     { src: "/service-hair.png", alt: "Hair Detail" },
 ];
 

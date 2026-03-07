@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Angelic Beauty & Wellness Studio | Premium Salon & Spa",
+  title: "Angelic Beauty & Wellness Studio | Premium Salon",
   description: "Experience luxury beauty, grooming, and wellness at Angelic Beauty & Wellness Studio. Established in 2017.",
 };
 

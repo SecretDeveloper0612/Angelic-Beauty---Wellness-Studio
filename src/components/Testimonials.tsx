@@ -13,7 +13,7 @@ const testimonials = [
     {
         name: "Olivia Grace",
         rating: 5,
-        text: "Angelic is my sanctuary. Their spa therapies are truly life-changing. Highly recommend for anyone looking for authentic relaxation.",
+        text: "Angelic is my sanctuary. Their wellness therapies are truly life-changing. Highly recommend for anyone looking for authentic relaxation.",
         photo: "/about-spa.png",
     },
     {

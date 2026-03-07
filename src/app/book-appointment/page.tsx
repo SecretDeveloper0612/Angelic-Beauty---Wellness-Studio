@@ -39,7 +39,7 @@ const HighEndServiceCards = () => {
     const highlights = [
         { image: "/service-hair.png", title: "Hair Styling", desc: "Expert precision cuts and artistic styling.", price: "$80 - $250" },
         { image: "/about-spa.png", title: "Facial Treatment", desc: "Rejuvenating skin therapies with premium oils.", price: "$120 - $400" },
-        { image: "/hero-bg.png", title: "Spa & Wellness", desc: "Complete body relaxation in a luxury setting.", price: "$150 - $600" },
+        { image: "/hero-bg.png", title: "Skin & Wellness", desc: "Complete body relaxation in a luxury setting.", price: "$150 - $600" },
         { image: "/service-hair.png", title: "Bridal Makeup", desc: "Elegant makeup for your truly special day.", price: "Custom" },
     ];
 
@@ -175,7 +175,7 @@ export default function BookAppointmentPage() {
                                 <span className="italic">Experience</span>
                             </h1>
                             <p className="text-white/80 font-sans tracking-widest text-sm md:text-lg uppercase max-w-xl leading-relaxed">
-                                Schedule your luxury salon or spa session with our world-class beauty experts.
+                                Schedule your luxury salon or wellness session with our world-class beauty experts.
                             </p>
                             <div className="flex gap-8 pt-8 border-t border-white/10 max-w-sm">
                                 <div>
@@ -240,7 +240,7 @@ export default function BookAppointmentPage() {
                                                     <option>Hair Styling</option>
                                                     <option>Hair Treatment</option>
                                                     <option>Facial & Skincare</option>
-                                                    <option>Spa Therapy</option>
+                                                    <option>Holistic Therapy</option>
                                                     <option>Manicure & Pedicure</option>
                                                     <option>Bridal Makeup</option>
                                                 </select>

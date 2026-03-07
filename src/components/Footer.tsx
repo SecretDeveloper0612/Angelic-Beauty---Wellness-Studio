@@ -10,7 +10,7 @@ const Footer = () => {
 
     const footerLinks = [
         { title: "Quick Links", links: ["Home", "About Us", "Gallery", "Pricing", "Testimonials"] },
-        { title: "Services", links: ["Hair Styling", "Skincare", "Spa & Wellness", "Hair Treatments", "Bridal Makeup"] },
+        { title: "Services", links: ["Hair Styling", "Skincare", "Beauty & Wellness", "Hair Treatments", "Bridal Makeup"] },
         { title: "Contact", links: ["mailto:mail.angelicstudio@gmail.com", "+91 7248034251", "123 Beauty Ave, Wellness St.", "Book an appointment", "Contact Form"] },
     ];
 

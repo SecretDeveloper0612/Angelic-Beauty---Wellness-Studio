@@ -23,15 +23,15 @@ const services = [
         image: "/about-spa.png",
     },
     {
-        title: "Spa Therapy",
+        title: "Holistic Therapy",
         icon: <FiHeart className="w-8 h-8" />,
-        description: "Indulge in our range of therapeutic spa treatments for complete relaxation.",
+        description: "Indulge in our range of therapeutic wellness treatments for complete relaxation.",
         image: "/about-spa.png",
     },
     {
         title: "Manicure & Pedicure",
         icon: <FiStar className="w-8 h-8" />,
-        description: "Pamper your hands and feet with our premium nail care and spa services.",
+        description: "Pamper your hands and feet with our premium nail care and relaxation services.",
         image: "/hero-bg.png",
     },
     {
