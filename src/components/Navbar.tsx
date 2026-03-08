@@ -138,7 +138,7 @@ const Navbar = () => {
                                     <Link
                                         href={link.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="text-2xl tracking-[0.3em] font-serif uppercase text-charcoal hover:text-rose-gold transition-colors px-4 py-1 block"
+                                        className="text-2xl tracking-[0.3em] font-serif uppercase text-charcoal hover:text-rose-gold transition-colors px-4 py-1 block text-center"
                                     >
                                         {link.name}
                                     </Link>
