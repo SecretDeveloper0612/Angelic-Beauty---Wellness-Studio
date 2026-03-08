@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import Image from "next/image";
 import { FiMapPin, FiPhone, FiMail, FiClock, FiInstagram, FiFacebook, FiTwitter } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
@@ -241,9 +242,11 @@ export default function ContactPage() {
                         <div className="relative z-10 space-y-8">
                             <h2 className="text-3xl md:text-6xl font-serif text-white leading-tight">Ready for Your <br /><span className="italic">Beauty Transformation?</span></h2>
                             <div className="flex justify-center">
-                                <button className="px-10 py-4 bg-rose-gold text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-all gold-glow shadow-xl">
-                                    Book Your Appointment
-                                </button>
+                                <Link href="/book-appointment">
+                                    <button className="px-10 py-4 bg-rose-gold text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-all gold-glow shadow-xl">
+                                        Book Your Appointment
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -36,12 +37,15 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link href="/book-appointment">
+                            <button
+                                className="px-10 py-4 bg-rose-gold text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px] shadow-xl"
+                            >
+                                Book Appointment
+                            </button>
+                        </Link>
                         <button
-                            className="px-10 py-4 bg-rose-gold text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px] shadow-xl"
-                        >
-                            Book Appointment
-                        </button>
-                        <button
+                            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                             className="px-10 py-4 bg-transparent border border-white/50 text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px]"
                         >
                             Explore Services

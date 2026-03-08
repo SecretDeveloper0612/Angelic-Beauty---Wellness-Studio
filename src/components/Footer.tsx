@@ -65,9 +65,8 @@ const Footer = () => {
                     <p className="text-white/30 text-[10px] uppercase font-sans tracking-[0.3em]">
                         © {currentYear} Angelic Beauty & Wellness Studio. All Rights Reserved.
                     </p>
-                    <div className="flex gap-8 text-white/30 text-[10px] uppercase font-sans tracking-[0.3em]">
-                        <Link href="#" className="hover:text-rose-gold">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-rose-gold">Terms of Service</Link>
+                    <div className="text-white/30 text-[10px] uppercase font-sans tracking-[0.3em]">
+                        Developed By <a href="https://preettech.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-rose-gold transition-colors duration-300">Preet Tech</a>
                     </div>
                 </div>
             </div>
