@@ -1,5 +1,6 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
     try {
@@ -10,6 +11,11 @@ export async function POST(req: Request) {
         const PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY;
         const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
         const SHEET_ID = process.env.GOOGLE_SHEET_ID;
+
+        // Email credentials
+        const EMAIL_USER = process.env.EMAIL_USER;
+        const EMAIL_PASS = process.env.EMAIL_PASS;
+        const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 
         // 1. Basic configuration check
         if (!CLIENT_EMAIL || !PRIVATE_KEY || !CALENDAR_ID) {
@@ -99,9 +105,49 @@ export async function POST(req: Request) {
                     status: sheetError.status,
                     data: sheetError.response?.data
                 });
+            }
+        }
 
-                // Note: If you renamed your sheet tab from "Sheet1", this will fail with 400 or 404.
-                // Note: Ensure the service account has "Editor" access to the specific sheet.
+        // 6. SEND EMAIL NOTIFICATION TO ADMIN
+        if (EMAIL_USER && EMAIL_PASS && ADMIN_EMAIL) {
+            try {
+                const transporter = nodemailer.createTransport({
+                    service: "gmail",
+                    auth: {
+                        user: EMAIL_USER,
+                        pass: EMAIL_PASS,
+                    },
+                });
+
+                const mailOptions = {
+                    from: `"Angelic Studio Booking" <${EMAIL_USER}>`,
+                    to: ADMIN_EMAIL,
+                    subject: `New Booking: ${service} - ${name}`,
+                    html: `
+                        <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+                            <h2 style="color: #d4af37;">New Client Booking!</h2>
+                            <p>A new appointment has been scheduled.</p>
+                            <hr style="border: 0; border-top: 1px solid #eee;" />
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr><td style="padding: 8px 0;"><strong>Client Name:</strong></td><td>${name}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Service:</strong></td><td>${service}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Date:</strong></td><td>${new Date(date).toLocaleDateString("en-IN")}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Time:</strong></td><td>${time}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Phone:</strong></td><td>${phone}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Email:</strong></td><td>${email}</td></tr>
+                                <tr><td style="padding: 8px 0;"><strong>Notes:</strong></td><td>${message || "N/A"}</td></tr>
+                            </table>
+                            <hr style="border: 0; border-top: 1px solid #eee;" />
+                            <p style="font-size: 12px; color: #777;">This is an automated notification from Angelic Salon Website.</p>
+                        </div>
+                    `,
+                };
+
+                await transporter.sendMail(mailOptions);
+                console.log("DEBUG: Admin notification email sent successfully");
+            } catch (emailError: any) {
+                console.error("EMAIL ERROR:", emailError.message);
+                // We don't return an error here to the user because the booking was already successful in Calendar/Sheets
             }
         }
 
