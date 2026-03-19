@@ -9,7 +9,7 @@ const Hero = () => {
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-full z-0">
                 <Image
-                    src="https://wallpapercave.com/wp/wp7885113.jpg"
+                    src="/hero-main.png"
                     alt="Luxury Salon Interior"
                     fill
                     className="object-cover"
@@ -22,7 +22,7 @@ const Hero = () => {
             {/* Content */}
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h4 className="text-xs uppercase font-sans tracking-[0.3em] text-rose-gold mb-6 font-medium">
+                    <h4 className="text-xs uppercase font-sans tracking-[0.3em] gold-text-gradient mb-6 font-bold">
                         ESTABLISHED IN 2017
                     </h4>
 
@@ -39,17 +39,18 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link href="/book-appointment">
                             <button
-                                className="px-10 py-4 bg-rose-gold text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px] shadow-xl"
+                                className="px-10 py-4 gold-btn-gradient text-white text-xs tracking-widest uppercase rounded-full min-w-[220px] shadow-xl"
                             >
                                 Book Appointment
                             </button>
                         </Link>
-                        <button
-                            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-10 py-4 bg-transparent border border-white/50 text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px]"
-                        >
-                            Explore Services
-                        </button>
+                        <Link href="/services">
+                            <button
+                                className="px-10 py-4 bg-transparent border border-white/50 text-white text-xs tracking-widest uppercase rounded-full hover:bg-white hover:text-charcoal transition-colors min-w-[220px]"
+                            >
+                                Explore Services
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

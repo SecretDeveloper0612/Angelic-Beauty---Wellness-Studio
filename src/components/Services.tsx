@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FiScissors, FiWind, FiDroplet, FiHeart, FiStar, FiClock } from "react-icons/fi";
 
 const services = [
@@ -8,37 +9,37 @@ const services = [
         title: "Hair Styling",
         icon: <FiScissors className="w-8 h-8" />,
         description: "Expert cuts and styling tailored to your face shape and personal style.",
-        image: "/service-hair.png",
+        image: "/service-hair-styling.png",
     },
     {
         title: "Hair Treatments",
         icon: <FiWind className="w-8 h-8" />,
         description: "Restore your hair's health and vitality with our luxury nourishing treatments.",
-        image: "/hero-bg.png",
+        image: "/service-hair-treatment.png",
     },
     {
         title: "Facial & Skincare",
         icon: <FiDroplet className="w-8 h-8" />,
         description: "Advanced skincare therapies that leaves your skin glowing and rejuvenated.",
-        image: "/about-spa.png",
+        image: "/service-facial.png",
     },
     {
         title: "Holistic Therapy",
         icon: <FiHeart className="w-8 h-8" />,
         description: "Indulge in our range of therapeutic wellness treatments for complete relaxation.",
-        image: "/about-spa.png",
+        image: "/service-holistic.png",
     },
     {
         title: "Manicure & Pedicure",
         icon: <FiStar className="w-8 h-8" />,
         description: "Pamper your hands and feet with our premium nail care and relaxation services.",
-        image: "/hero-bg.png",
+        image: "/service-mani-pedi.png",
     },
     {
         title: "Bridal Makeup",
         icon: <FiClock className="w-8 h-8" />,
         description: "Stunning bridal and special event makeup styles for your most precious moments.",
-        image: "/service-hair.png",
+        image: "/service-bridal.png",
     },
 ];
 
@@ -86,9 +87,11 @@ const Services = () => {
                                     </p>
 
                                     <div className="pt-2">
-                                        <button className="text-[10px] uppercase font-sans tracking-[0.3em] font-medium text-rose-gold border-b border-rose-gold/30 pb-1">
-                                            Explore Service
-                                        </button>
+                                        <Link href="/services">
+                                            <button className="text-[10px] uppercase font-sans tracking-[0.3em] font-medium text-rose-gold border-b border-rose-gold/30 pb-1 hover:text-charcoal hover:border-charcoal transition-colors">
+                                                Explore Service
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

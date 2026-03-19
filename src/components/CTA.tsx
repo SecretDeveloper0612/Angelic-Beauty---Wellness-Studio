@@ -13,7 +13,7 @@ const CTA = () => {
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/hero-bg.png"
+                            src="/gallery-1.png"
                             alt="Luxury Beauty Ambiance"
                             fill
                             className="object-cover"
@@ -22,7 +22,7 @@ const CTA = () => {
                     </div>
 
                     <div className="relative z-10 max-w-3xl mx-auto space-y-12">
-                        <h4 className="text-xs uppercase font-sans tracking-[0.4em] text-rose-gold mb-6 font-medium">
+                        <h4 className="text-xs uppercase font-sans tracking-[0.4em] gold-text-gradient mb-6 font-bold">
                             EXPERIENCE THE BEST
                         </h4>
                         <h2 className="text-4xl md:text-7xl font-serif text-white mb-8 tracking-tight leading-tight">
@@ -35,7 +35,7 @@ const CTA = () => {
                         <div className="flex justify-center">
                             <Link href="/book-appointment">
                                 <button
-                                    className="px-12 py-5 bg-rose-gold text-white text-xs md:text-sm tracking-[0.3em] font-sans uppercase rounded-full hover:bg-white hover:text-charcoal shadow-rose-gold/20 shadow-2xl transition-all"
+                                    className="px-12 py-5 gold-btn-gradient text-white text-xs md:text-sm tracking-[0.3em] font-sans uppercase rounded-full shadow-2xl transition-all"
                                 >
                                     Book Your Appointment Now
                                 </button>

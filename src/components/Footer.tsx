@@ -9,9 +9,35 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const footerLinks = [
-        { title: "Quick Links", links: ["Home", "About Us", "Gallery", "Pricing", "Testimonials"] },
-        { title: "Services", links: ["Hair Styling", "Skincare", "Beauty & Wellness", "Hair Treatments", "Bridal Makeup"] },
-        { title: "Contact", links: ["mailto:mail.angelicstudio@gmail.com", "+91 7248034251", "123 Beauty Ave, Wellness St.", "Book an appointment", "Contact Form"] },
+        { 
+            title: "Quick Links", 
+            links: [
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/#about" },
+                { name: "Gallery", href: "/#gallery" },
+                { name: "Services", href: "/services" },
+                { name: "Contact", href: "/contact" }
+            ] 
+        },
+        { 
+            title: "Services", 
+            links: [
+                { name: "Bridal & Hair", href: "/services#hair-bridal" },
+                { name: "Skin & Face", href: "/services#skin-face" },
+                { name: "Body & Wellness", href: "/services#body-wellness" },
+                { name: "Nail Care", href: "/services#nails" },
+                { name: "Specialty Packages", href: "/services#packages" }
+            ] 
+        },
+        { 
+            title: "Contact", 
+            links: [
+                { name: "Email Us", href: "mailto:mail.angelicstudio@gmail.com" },
+                { name: "+91 8679066679", href: "tel:+918679066679" },
+                { name: "Book Appointment", href: "/book-appointment" },
+                { name: "Our Location", href: "/contact" }
+            ] 
+        },
     ];
 
     return (
@@ -19,23 +45,29 @@ const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
                     {/* Logo & About */}
-                    <div className="space-y-8 text-left">
-                        <Link href="/" className="group">
-                            <div className="relative h-36 w-52 mb-4">
-                                <Image src={whiteLogo} alt="Logo" fill className="object-contain" />
+                    <div className="flex flex-col items-start space-y-8 text-left">
+                        <Link href="/" className="group block w-full">
+                            <div className="relative h-32 w-48 mb-4 -ml-4 md:-ml-6">
+                                <Image src={whiteLogo} alt="Logo" fill className="object-contain object-left" />
                             </div>
                         </Link>
                         <p className="text-white/50 font-sans text-sm leading-relaxed tracking-wider font-light">
                             Experience the pinnacle of luxury, beauty, and wellness at Angelic Beauty & Wellness Studio. Established in 2017, we have redefined the standards of elegance.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            {[<FiInstagram key="insta" />, <FiFacebook key="fb" />, <FiTwitter key="tw" />].map((icon, idx) => (
+                            {[
+                                { icon: <FiInstagram />, href: "https://www.instagram.com/angelic_studio_official/" },
+                                { icon: <FiFacebook />, href: "https://www.facebook.com/angelic.beautyandwellnessstudio" },
+                                { icon: <FiTwitter />, href: "#" }
+                            ].map((social, idx) => (
                                 <a
                                     key={idx}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-rose-gold"
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-rose-gold transition-colors"
                                 >
-                                    {icon}
+                                    {social.icon}
                                 </a>
                             ))}
                         </div>
@@ -49,10 +81,10 @@ const Footer = () => {
                                 {section.links.map((link, lIdx) => (
                                     <li key={lIdx}>
                                         <Link
-                                            href="#"
+                                            href={link.href}
                                             className="text-white/50 hover:text-white text-sm font-sans tracking-widest uppercase text-[10px]"
                                         >
-                                            {link}
+                                            {link.name}
                                         </Link>
                                     </li>
                                 ))}

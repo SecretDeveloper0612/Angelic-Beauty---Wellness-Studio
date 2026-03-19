@@ -29,9 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${inter.variable} ${montserrat.variable} antialiased`}
+        suppressHydrationWarning
       >
         {children}
         <FloatingEnquiry />

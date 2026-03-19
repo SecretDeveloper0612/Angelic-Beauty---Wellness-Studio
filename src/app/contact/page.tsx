@@ -12,13 +12,13 @@ const infoCards = [
     {
         icon: <FiMapPin className="w-6 h-6" />,
         title: "Salon Address",
-        details: ["123 Luxury Avenue, Phase 1", "Elegant City, PIN 400123"],
+        details: ["3rd floor, 2-145, do nehriya road", "near front of Indian Petrol Pump", "Haldwani, Nainital, Uttarakhand (263139)"],
         label: "Address"
     },
     {
         icon: <FiPhone className="w-6 h-6" />,
         title: "Phone Number",
-        details: ["+91 98765 43210", "+91 87654 32109"],
+        details: ["+91 86790 66679"],
         label: "Phone"
     },
     {
@@ -51,7 +51,7 @@ export default function ContactPage() {
             <section className="relative h-[65vh] w-full overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://wallpapercave.com/wp/wp7885113.jpg"
+                        src="/contact-hero.png"
                         alt="Contact Angelic Studio"
                         fill
                         className="object-cover"
@@ -192,15 +192,15 @@ export default function ContactPage() {
                         <h4 className="text-xs uppercase font-sans tracking-[0.4em] text-rose-gold mb-4 font-medium">FIND US</h4>
                         <h2 className="text-4xl md:text-5xl font-serif text-charcoal">Our Studio Location</h2>
                     </div>
-                    <div className="w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-rose-gold/5 relative bg-white/50 backdrop-blur-sm">
+                    <div className="w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-rose-gold/10 relative bg-white">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.388832155026!2d77.3023!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMTgnMDguMyJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.2882250264155!2d79.51139467611894!3d29.15655546025686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09ad74e98f6d7%3A0xe677ec788915ae34!2sIndian%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1710852000000!5m2!1sen!2sin"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
-                            className="grayscale brightness-90 relative z-10"
+                            className="relative z-10 w-full h-full border-none shadow-none"
                         ></iframe>
                     </div>
                 </div>
@@ -213,12 +213,18 @@ export default function ContactPage() {
                     <h2 className="text-4xl md:text-5xl font-serif text-charcoal mb-12">Follow Our Beauty Journey</h2>
                     <div className="flex justify-center gap-6">
                         {[
-                            { icon: <FiInstagram />, label: "Instagram" },
-                            { icon: <FiFacebook />, label: "Facebook" },
-                            { icon: <FaWhatsapp />, label: "WhatsApp" },
-                            { icon: <FiTwitter />, label: "Twitter" }
+                            { icon: <FiInstagram />, label: "Instagram", href: "https://www.instagram.com/angelic_studio_official/" },
+                            { icon: <FiFacebook />, label: "Facebook", href: "https://www.facebook.com/angelic.beautyandwellnessstudio" },
+                            { icon: <FaWhatsapp />, label: "WhatsApp", href: "https://wa.me/918679066679" },
+                            { icon: <FiTwitter />, label: "Twitter", href: "#" }
                         ].map((social, i) => (
-                            <a key={i} href="#" className="w-16 h-16 rounded-full bg-soft-cream flex items-center justify-center text-charcoal/60 text-2xl hover:bg-rose-gold hover:text-white transition-all transform hover:scale-110 shadow-lg">
+                            <a 
+                                key={i} 
+                                href={social.href} 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-16 h-16 rounded-full bg-soft-cream flex items-center justify-center text-charcoal/60 text-2xl hover:bg-rose-gold hover:text-white transition-all transform hover:scale-110 shadow-lg"
+                            >
                                 {social.icon}
                             </a>
                         ))}
@@ -232,7 +238,7 @@ export default function ContactPage() {
                     <div className="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl flex items-center justify-center text-center p-12">
                         <div className="absolute inset-0 z-0">
                             <Image
-                                src="https://wallpapercave.com/wp/wp7885113.jpg"
+                                src="/hero-main.png"
                                 alt="Spa"
                                 fill
                                 className="object-cover opacity-80"

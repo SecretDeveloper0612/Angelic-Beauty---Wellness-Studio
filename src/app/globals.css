@@ -6,10 +6,8 @@
   --font-display: var(--font-montserrat);
 
   /* Angelic Logo Optimized Palette */
-  --color-rose-gold: #7A6A1E;
-  /* Deep Logo Bronze */
-  --color-luxury-gold: #A69246;
-  /* Muted Logo Gold */
+  --color-rose-gold: #A69246; /* More luminous bronze-gold */
+  --color-luxury-gold: #D4AF37; /* Classic vibrant gold */
   --color-soft-cream: #FDFBF7;
   --color-charcoal: #3A330B;
   /* Dark Logo Text */
@@ -40,6 +38,25 @@ h6 {
   font-family: var(--font-serif);
 }
 
+.gold-text-gradient {
+  background: linear-gradient(to right, #A69246 0%, #D4AF37 50%, #A69246 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-btn-gradient {
+  background: linear-gradient(135deg, #A69246 0%, #D4AF37 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gold-btn-gradient:hover {
+  background: linear-gradient(135deg, #D4AF37 0%, #A69246 100%);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
 .luxury-gradient {
   background: linear-gradient(135deg, #F6EFEA 0%, #ffffff 100%);
 }
@@ -51,4 +68,12 @@ h6 {
 .glass-card {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

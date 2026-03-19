@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingEnquiry = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const phoneNumber = "+917248034251";
+    const phoneNumber = "+918679066679";
     const whatsappMsg = encodeURIComponent("Hello Angelic Beauty & Wellness Studio! I would like to enquire about your services.");
 
     return (

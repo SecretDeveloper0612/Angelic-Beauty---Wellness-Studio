@@ -12,7 +12,7 @@ const About = () => {
                         <div className="absolute -top-10 -left-10 w-full h-full border border-rose-gold/20 -z-10" />
                         <div className="relative aspect-[4/5] md:aspect-[5/6] overflow-hidden rounded-2xl shadow-2xl">
                             <Image
-                                src="/about-spa.png"
+                                src="/about-wellness.png"
                                 alt="About Angelic Beauty & Wellness"
                                 fill
                                 className="object-cover"
